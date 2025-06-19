@@ -6,7 +6,7 @@ const api = axios.create({
 
 function getMostRecent(){
 
-    return api.get("/search?key=AIzaSyCh7ZL80o3TltNl1VWB-WpRehV5GMJHqwo&part=snippet&channelId=UCoG5ya-sMXNMkqkIz1sZ_Lw&order=date&maxResults=1").then(({ data }) => {
+    return api.get(`/search?channelId=UCmopeXHb16dHZHI6qRWWkXg&part=snippet&key=${APIKEY}&order=date&maxResults=1`).then(({ data }) => {
        console.log(data.items[0].id.videoId)
         return data.items[0].id.videoId
 }
